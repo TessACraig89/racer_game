@@ -3,53 +3,44 @@ const player1 = document.getElementById('player1');
 //definer player2
 const player2 = document.getElementById('player2');
 //define player1 position
-const player1Pos = ;
+let player1Pos = 0;
 //define player2 position
-const player2Pos = ;
-//define final position
-const finalPos = ;
-//define player1 lane
-const player1Lane = ;
-//define player2 lane
-const player2Lane = ;
+let player2Pos = 0;
+//define finishLine position
+const finishLinePos = window.screen.width - 50;
+
 
 //move function
-  //keypress EventListener that triggers move function
-    // for (start position = 0; position <= lane length; position++)
+  //keypress EventListener
         // if key === 'z'
-          //player1 position + 1px right
+          //player1 position = current postition+ 15
+          //player1.setAttribute for moving right
         // if key === 'p'
-          //player2 position + 1px right
-const movePlayer = () => {
-  document.addEventListener('keypress', (event)) => {
-    for (pos = 0; pos <=  ; pos++) {
+          //player2 position = current position+ 15
+          //player2.setAttribute for moving right
+const movePlayers = () => {
+  document.addEventListener('keypress', (event) => {
       if (event.key === 'z') {
-
+        player1Pos = player1Pos + 15;
+        player1.setAttribute("style", "position: relative; left: " + player1Pos + "px");
       } else if (event.key === 'p') {
-
-      }else {
-        player1Pos === player1Pos
-        player2Pos === player2Pos
+        player2Pos = player2Pos + 15;
+        player2.setAttribute("style", "position: relative; left: " + player2Pos + "px");
       }
-    }
-  }
-}
-
-//key up eventlistener that stops function
-document.addEventListener('keyup', (event)) => {
-  
-}
-
+    })
+  };
 
 //anounce function
-    //if player1 postion = final postion && player2 position !== final position
+    //if player1 postion >= finishLinePos
         //alert player1 won
-    //else if player2 postion = final postion && player1 position !== final position
+    //else if player2 postion >= finishLinePos
         //alert player2 won
-const announceWinner = () {
-    if (player1Pos === finalPos && player2Pos !== finalPos) {
+const announceWinner = () => {
+    if (player1Pos >= finishLinePos) {
       alert('Player 1 is the winner!')
-    } else if (player2Pos === finalPos && player1Pos !== finalPos) {
+    } else if (player2Pos >= finishLinePos) {
       alert('Player 2 is the winner!')
     }
 }
+
+movePlayers();
