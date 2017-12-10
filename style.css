@@ -2,4 +2,14 @@
   width: 30px;
   height: 30px;
   background-color: blue;
+  border-collapse: separate;
+  border-spacing: 15px;
+}
+
+#player2 {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border-collapse: separate;
+  border-spacing: 15px 50px;
 }
