@@ -4,6 +4,10 @@
   background-color: blue;
   border-collapse: separate;
   border-spacing: 15px;
+  transition: transform 300ms ease-in-out;
+}
+
+#player1:hover {
   transform: translate(640px, 0px);
 }
 
@@ -14,6 +18,10 @@
   border-collapse: separate;
   border-spacing: 15px 50px;
   margin-top: 30px;
+  transition: transform 300ms ease-in-out;
+}
+
+#player2:hover {
   transform: translate(640px, 0px);
 }
 
