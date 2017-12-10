@@ -1,32 +1,19 @@
-#player1 {
+h1 {
+  text-align: center;
+  }
+
+  #player1 {
   width: 30px;
   height: 30px;
   background-color: blue;
-  border-collapse: separate;
-  border-spacing: 15px;
-  transition: transform 300ms ease-in-out;
-}
-
-#player1:hover {
-  transform: translate(640px, 0px);
+  margin-top: 30px;
 }
 
 #player2 {
   width: 30px;
   height: 30px;
   background-color: maroon;
-  border-collapse: separate;
-  border-spacing: 15px 50px;
   margin-top: 30px;
-  transition: transform 300ms ease-in-out;
-}
-
-#player2:hover {
-  transform: translate(640px, 0px);
-}
-
-ul {
-  list-style-type: none;
 }
 
 #finishLine {
@@ -34,7 +21,10 @@ ul {
   height: 150px;
   background-color: black;
   float: right;
-  margin-top: 1px;
-  border-collapse: separate;
-  border-spacing: 40px;
+  left: 1200px;
+  margin-right: 40px;
+}
+
+#Developer {
+  text-align: center;
 }
