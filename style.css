@@ -4,17 +4,29 @@
   background-color: blue;
   border-collapse: separate;
   border-spacing: 15px;
+  transform: translate(640px, 0px);
 }
 
 #player2 {
   width: 30px;
   height: 30px;
-  background-color: red;
+  background-color: maroon;
   border-collapse: separate;
   border-spacing: 15px 50px;
   margin-top: 30px;
+  transform: translate(640px, 0px);
 }
 
 ul {
   list-style-type: none;
+}
+
+#finishLine {
+  width: 10px;
+  height: 150px;
+  background-color: black;
+  float: right;
+  margin-top: 1px;
+  border-collapse: separate;
+  border-spacing: 40px;
 }
