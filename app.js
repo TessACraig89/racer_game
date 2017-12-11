@@ -1,3 +1,4 @@
+
 //define player1
 const player1 = document.getElementById('player1');
 //definer player2
@@ -7,13 +8,15 @@ let player1Pos = 0;
 //define player2 position
 let player2Pos = 0;
 //define finishLine position
-const finishLinePos = window.screen.width - 665;
+const finishLinePos = window.screen.width - 150;
 
-//anounce function
+document.getElementById("finishLine").setAttribute("style", "left: " + finishLinePos + "px");
+
+//announce function
     //if player1 postion >= finishLinePos
         //alert player1 won
     //else if player2 postion >= finishLinePos
-        //alert player2 won
+      //alert player2 won
 const announceWinner = () => {
     if (player1Pos >= finishLinePos) {
       alert("Player 1 is the winner!");
