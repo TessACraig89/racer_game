@@ -7,8 +7,20 @@ let player1Pos = 0;
 //define player2 position
 let player2Pos = 0;
 //define finishLine position
-const finishLinePos = window.screen.width - 50;
+const finishLinePos = window.screen.width - 100;
 
+//anounce function
+    //if player1 postion >= finishLinePos
+        //alert player1 won
+    //else if player2 postion >= finishLinePos
+        //alert player2 won
+const announceWinner = () => {
+    if (player1Pos >= finishLinePos) {
+      alert("Player 1 is the winner!");
+    } else if (player2Pos >= finishLinePos) {
+      alert("Player 2 is the winner!");
+    }
+  }
 
 //move function
   //keypress EventListener
@@ -23,24 +35,13 @@ const movePlayers = () => {
       if (event.key === 'z') {
         player1Pos = player1Pos + 15;
         player1.setAttribute("style", "position: relative; left: " + player1Pos + "px");
+        announceWinner();
       } else if (event.key === 'p') {
         player2Pos = player2Pos + 15;
         player2.setAttribute("style", "position: relative; left: " + player2Pos + "px");
+        announceWinner();
       }
-    })
-  };
-
-//anounce function
-    //if player1 postion >= finishLinePos
-        //alert player1 won
-    //else if player2 postion >= finishLinePos
-        //alert player2 won
-const announceWinner = () => {
-    if (player1Pos >= finishLinePos) {
-      alert('Player 1 is the winner!')
-    } else if (player2Pos >= finishLinePos) {
-      alert('Player 2 is the winner!')
-    }
-}
+    });
+  }
 
 movePlayers();
