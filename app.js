@@ -1,15 +1,15 @@
 
 //define player1
 const player1 = document.getElementById('player1');
-//definer player2
+//define player2
 const player2 = document.getElementById('player2');
-//define player1 position
+//define player1 initial position
 let player1Pos = 0;
-//define player2 position
+//define player2 initial position
 let player2Pos = 0;
-//define finishLine position
+//define finishLine position in relation to screen width
 const finishLinePos = window.screen.width - 150;
-
+//get finishLine element and style finishLinePos to the right side of the screen at finishLinePos px
 document.getElementById("finishLine").setAttribute("style", "left: " + finishLinePos + "px");
 
 //announce function
@@ -46,5 +46,5 @@ const movePlayers = () => {
       }
     });
   }
-
+// evoke movePlayers function
 movePlayers();
