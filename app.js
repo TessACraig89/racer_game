@@ -7,7 +7,7 @@ let player1Pos = 0;
 //define player2 position
 let player2Pos = 0;
 //define finishLine position
-const finishLinePos = window.screen.width - 100;
+const finishLinePos = window.screen.width - 300;
 
 //anounce function
     //if player1 postion >= finishLinePos
